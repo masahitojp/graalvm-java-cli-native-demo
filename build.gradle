@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '2.0.3'
+    id 'java'
+}
+
+shadowJar {
+    baseName = 'clitest'
+    classifier = null
+    version = null
+}
+
+version = 1.0
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'Shell'
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies{
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+}
