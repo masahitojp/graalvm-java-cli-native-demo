@@ -1,4 +1,3 @@
-FROM ubuntu:18.04
+FROM jeanblanchard/alpine-glibc:3.7
 
 ADD clitest clitest
-
